@@ -99,7 +99,6 @@ canvas {
 }
 
 #blogArticle {
-  overflow: scroll;
   padding: 6.25rem 0.75rem; /* Adjusted padding to use rem */
   max-width: 62.5rem; /* Equivalent to 1000px */
   margin: 0 auto;
