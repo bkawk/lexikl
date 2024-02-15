@@ -3,13 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lexikl</title>
+    <title>
+      Lexikl - Revolutionizing Web Development with Visual Scripting
+    </title>
+    <meta
+      name="description"
+      content="Lexikl introduces a visual scripting language for the web, empowering developers and designers to create complex interactions and functionalities without traditional coding."
+    />
+    <meta
+      name="keywords"
+      content="Lexikl, visual scripting, web development, design, accessibility, rapid prototyping, collaboration"
+    />
+    <!-- Updated keywords -->
     <link rel="stylesheet" href="builder.css" />
+    <meta name="author" content="@bkawk" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2d2d2d" />
+    <meta name="theme-color" content="#2d2d2d" />
+
+    <!-- Open Graph tags -->
+    <meta
+      property="og:title"
+      content="Lexikl - Revolutionizing Web Development with Visual Scripting"
+    />
+    <meta
+      property="og:description"
+      content="Lexikl introduces a visual scripting language for the web, empowering developers and designers to create complex interactions and functionalities without traditional coding."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lexikl.com/" />
+    <meta property="og:image" content="https://lexikl.com/logo.svg" />
+    <meta property="og:image:alt" content="Lexikl Logo" />
+    <meta property="og:site_name" content="Lexikl" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bkawk" />
+    <meta
+      name="twitter:title"
+      content="Lexikl - Revolutionizing Web Development with Visual Scripting"
+    />
+    <meta
+      name="twitter:description"
+      content="Lexikl introduces a visual scripting language for the web, empowering developers and designers to create complex interactions and functionalities without traditional coding."
+    />
+    <meta name="twitter:image" content="https://lexikl.com/logo.svg" />
   </head>
   <body>
     <header id="headerBar">
       <img src="logo.svg" alt="Logo" id="logo" />
       <h1>Lexikl</h1>
+      <a href="tech-blog/index.html" id="techBlogLink">Tech Blog</a>
     </header>
     <div>
       <canvas id="topCanvas" width="800" height="600"></canvas>
@@ -18,5 +67,22 @@
     </div>
     <footer id="footerBar">Made with ❤ ©2024 @bkawk</footer>
     <script src="builder.min.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js').then(
+            function (registration) {
+              console.log(
+                'Service Worker registered with scope:',
+                registration.scope
+              );
+            },
+            function (err) {
+              console.log('Service Worker registration failed:', err);
+            }
+          );
+        });
+      }
+    </script>
   </body>
 </html>
