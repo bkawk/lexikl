@@ -1,12 +1,16 @@
+@charset "UTF-8";
 body,
 html {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden;
   position: relative;
   background-color: #262626;
   color: #d2d2d2;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 canvas {
@@ -73,7 +77,7 @@ canvas {
   margin-right: 20px;
   font-size: 1rem;
   align-self: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 #footerBar {
@@ -90,10 +94,76 @@ canvas {
   left: 0;
   padding-right: 20px;
   z-index: 4;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   pointer-events: none;
 }
 
+#blogArticle {
+  overflow: scroll;
+  padding: 6.25rem 0.75rem; /* Adjusted padding to use rem */
+  max-width: 62.5rem; /* Equivalent to 1000px */
+  margin: 0 auto;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.25rem; /* Adjusted gap to use rem */
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#blogArticle h1 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem; /* Keep larger headings explicitly sized if desired */
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+#blogArticle h2 {
+  padding-top: 3.125rem; /* Adjusted to use rem */
+}
+#blogArticle p {
+  line-height: 2rem; /* Adjusted line height to use rem */
+  font-size: 1.25rem; /* Default font size, 20px equivalent */
+  font-weight: 300;
+  letter-spacing: -0.1px;
+  padding: 6px 0;
+}
+#blogArticle ul {
+  list-style: none;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+#blogArticle ul li {
+  margin-bottom: 1rem; /* Adjusted margin to use rem */
+}
+#blogArticle ul li:before {
+  content: "•"; /* Bullet character */
+  color: #007bff; /* Color of bullet */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+#blogArticle img {
+  margin-top: 24px;
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #blogArticle p {
+    font-size: 1rem; /* Smaller font size for smaller screens, 16px equivalent */
+  }
+  #blogArticle img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+/* Additional media query for even smaller screens */
+@media (max-width: 480px) {
+  #blogArticle p {
+    font-size: 0.875rem; /* Even smaller font size for very small screens, 14px equivalent */
+  }
+}
 #blogContainer {
   grid-gap: 50px;
   max-width: 1000px;
@@ -103,12 +173,12 @@ canvas {
   grid-template-columns: 2fr 1fr;
 }
 #blogContainer h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
   margin: 0;
 }
 #blogContainer h4 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
   margin: 0;
@@ -116,7 +186,7 @@ canvas {
   padding-bottom: 12px;
 }
 #blogContainer h3 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   margin: 0;
 }
