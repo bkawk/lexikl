@@ -23,6 +23,91 @@ canvas {
   height: 100%;
 }
 
+#parameters {
+  position: absolute;
+  top: 74px;
+  right: 24px;
+  z-index: 15;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  width: 400px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: grid;
+  grid-gap: px;
+}
+form input:not(:last-child),
+form select:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(204, 204, 204);
+  font-size: 0.9em;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+input[type=password] {
+  background-color: #2b2b2b;
+  border: 2px solid #3c3f41;
+  border-radius: 4px;
+  color: #d2d2d2;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+select:focus,
+input[type=password]:focus {
+  border-color: gold;
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  accent-color: #5294ff;
+  margin-right: 5px;
+}
+
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+input[type=checkbox]:focus + .checkbox-label,
+input[type=radio]:focus + .radio-label {
+  outline: 1px solid #5294ff;
+  outline-offset: 2px;
+}
+
 #topCanvas {
   z-index: 3;
 }
