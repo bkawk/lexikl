@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"');
 body,
 html {
   width: 100%;
@@ -7,6 +8,7 @@ html {
   position: relative;
   background-color: #262626;
   color: #d2d2d2;
+  text-rendering: optimizeLegibility;
 }
 
 .no-scroll {
@@ -52,7 +54,7 @@ form select:not(:last-child) {
 label {
   display: block;
   margin-bottom: 5px;
-  color: rgb(204, 204, 204);
+  color: rgb(163, 163, 163);
   font-size: 0.9em;
 }
 
@@ -61,13 +63,15 @@ input[type=email],
 input[type=number],
 select,
 input[type=password] {
-  background-color: #2b2b2b;
+  font-size: 1.3em;
+  background-color: #000;
   border: 2px solid #3c3f41;
   border-radius: 4px;
-  color: #d2d2d2;
+  color: #e2e2e2;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
+  font-family: "Sometype Mono", monospace;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -82,7 +86,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 20px;
