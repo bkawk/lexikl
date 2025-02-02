@@ -135,7 +135,7 @@ input[type=radio]:focus + .radio-label {
 
 #headerBar {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -153,6 +153,25 @@ input[type=radio]:focus + .radio-label {
   width: auto;
   max-height: 100%;
   margin: 12px;
+}
+#headerBar button {
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 12px;
+}
+#headerBar #signin {
+  cursor: pointer;
+  color: white;
+  background-color: #262626;
+  border: 1px solid #121212;
+}
+#headerBar #signup {
+  margin: 12px;
+  cursor: pointer;
+  color: white;
+  background-color: #007bff;
+  border: 1px solid #01448b;
 }
 #headerBar h1 {
   margin: 0;
@@ -239,6 +258,9 @@ input[type=radio]:focus + .radio-label {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+  #techBlogLink {
+    display: none;
+  }
   #blogArticle p {
     font-size: 1rem; /* Smaller font size for smaller screens, 16px equivalent */
   }
